@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <link rel="icon" href="images/logo1.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore Resistenze</title>
+    <link rel="stylesheet" href="styles_calc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Calcolatore Resistenze</h1>
+        
+        <div class="band-selector">
+            <div class="band-option" data-bands="4">
+                <div class="option-content">
+                    <h3>4 Bande</h3>
+                    <div class="mini-resistor">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="band-option" data-bands="5">
+                <div class="option-content">
+                    <h3>5 Bande</h3>
+                    <div class="mini-resistor">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="band-option" data-bands="6">
+                <div class="option-content">
+                    <h3>6 Bande</h3>
+                    <div class="mini-resistor">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="parameters-section">
+                <h2>Parametri del resistore</h2>
+                <div id="bandInputs" class="band-inputs"></div>
+                
+                <!-- Nuova sezione per il calcolo inverso -->
+                <div class="input-group resistance-value-group">
+                    <label>Valore Resistenza</label>
+                    <div class="resistance-input-container">
+                        <input type="number" id="resistanceValue" placeholder="Inserisci valore..." step="any">
+                        <select id="resistanceUnit">
+                            <option value="1">Ω</option>
+                            <option value="1000">kΩ</option>
+                            <option value="1000000">MΩ</option>
+                            <option value="1000000000">GΩ</option>
+                        </select>
+                    </div>
+                    <button class="calcola-colori-btn">
+                        <span class="btn-icon">🎨</span>
+                        <span>Calcola Colori</span>
+                    </button>
+                </div>
+
+                <div class="button-group">
+                    <button class="calcola-btn">
+                        <span class="btn-icon">⚡</span>
+                        <span>Calcola Valore</span>
+                    </button>
+                    <button class="azzera-btn">
+                        <span class="btn-icon">↺</span>
+                        <span>Azzera</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <h2>Risultato</h2>
+                <div class="resistor-container">
+                    <div class="resistor-display">
+                        <div class="resistor" id="resistorDisplay"></div>
+                        <div class="resistor-shadow"></div>
+                    </div>
+                </div>
+                <div class="value-display">
+                    <h3>Valore resistore:</h3>
+                    <div class="result" id="result">Seleziona il tipo di resistore</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script_calc.js"></script>
+</body>
+</html>
